@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hide-scroll::-webkit-scrollbar { 
+    display: none;
+}
+
+
+
+/* Custom styles for DayPicker */
+
+.DayPicker {
+    --rdp-background-color: white;
+    --rdp-accent-color: #34D399; /* Tailwind green-400 */
+    --rdp-accent-color-dark: #059669; /* Tailwind green-600 */
+    --rdp-primary-text-color: #333;
+  }
+  
+  /* Highlight today's date */
+  .today .rdp-day {
+    background-color: #34D399; /* Tailwind green-400 */
+    color: white;
+    border-radius: 9999px; /* Full circle */
+  }
+  
+  /* Selected date style */
+  .selected .rdp-day {
+    background-color: #059669; /* Tailwind green-600 */
+    color: white;
+    border-radius: 9999px; /* Full circle */
+  }
+  
+  /* Hover effect for day cells */
+  .rdp-day:hover:not(.today):not(.selected) {
+    background-color: #BFDBFE; /* Tailwind light blue-300 */
+    color: #333;
+    border-radius: 9999px; /* Full circle */
+  }
+
+  .rdp {
+    border: "2px solid blue"
+  }
+
+  @layer base {
+  :root { 
+        --radius: 0.5rem;
+    }
+}
